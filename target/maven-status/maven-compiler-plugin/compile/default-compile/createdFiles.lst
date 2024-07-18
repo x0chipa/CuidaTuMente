@@ -9,6 +9,7 @@ dominio\Instrumento.class
 web\ServletPreguntas.class
 datos\UsuarioDaoJDBC.class
 utilidades\Utilidades.class
+web\ServletVerTest.class
 dominio\Pregunta.class
 web\ServletControlador.class
 datos\ResultadoDaoJDBC.class

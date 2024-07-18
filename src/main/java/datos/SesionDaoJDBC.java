@@ -66,6 +66,33 @@ public class SesionDaoJDBC {
         }
         return sesion;
     }
+    
+    // Método encontrar por ID
+    public Sesion encontrar(int id) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Sesion sesion = null;
+        try {
+            conn = Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_SELECT_BY_ID);
+            stmt.setInt(1, id);
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                java.sql.Date fecha = rs.getDate("fecha");
+                java.sql.Time hora = rs.getTime("hora");
+
+                sesion = new Sesion(id, fecha, hora);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(rs);
+            Conexion.close(stmt);
+            Conexion.close(conn);
+        }
+        return sesion;
+    }
 
     public int insertar(Sesion sesion) {
         Connection conn = null;

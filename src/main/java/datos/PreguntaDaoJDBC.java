@@ -1,6 +1,7 @@
 package datos;
 
 import dominio.Pregunta;
+import dominio.Respuesta;
 import java.sql.*;
 import java.util.*;
 
@@ -11,6 +12,8 @@ public class PreguntaDaoJDBC {
     private static final String SQL_INSERT = "INSERT INTO preguntas(Instrumento_id, pregunta, respuesta_1, respuesta_2, respuesta_3, respuesta_4, respuesta_5) VALUES(?, ?, ?, ?, ?, ?, ?)";
     private static final String SQL_UPDATE = "UPDATE preguntas SET Instrumento_id=?, pregunta=?, respuesta_1=?, respuesta_2=?, respuesta_3=?, respuesta_4=?, respuesta_5=? WHERE id_pregunta=?";
     private static final String SQL_DELETE = "DELETE FROM preguntas WHERE id_pregunta = ?";
+    private static final String SQL_SELECT_BY_RESPUESTAS = "SELECT * FROM pregunta WHERE id_pregunta = ?";
+     private static final String SQL_SELECT_BY_ID_2 = "SELECT id_pregunta, Instrumento_id, pregunta, respuesta_1, respuesta_2, respuesta_3, respuesta_4, respuesta_5 FROM preguntas WHERE id_pregunta = ?";
 
     public List<Pregunta> listar() {
         Connection conn = null;
@@ -77,6 +80,8 @@ public class PreguntaDaoJDBC {
         }
         return preguntas;
     }
+    
+    
 
     public Pregunta encontrar(Pregunta pregunta) {
         Connection conn = null;
@@ -103,6 +108,37 @@ public class PreguntaDaoJDBC {
             pregunta.setRespuesta3(respuesta3);
             pregunta.setRespuesta4(respuesta4);
             pregunta.setRespuesta5(respuesta5);
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(rs);
+            Conexion.close(stmt);
+            Conexion.close(conn);
+        }
+        return pregunta;
+    }
+    
+     public Pregunta encontrarPorId(int idPregunta) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Pregunta pregunta = null;
+        try {
+            conn = Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_SELECT_BY_ID_2);
+            stmt.setInt(1, idPregunta);
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                pregunta = new Pregunta();
+                pregunta.setIdPregunta(rs.getInt("id_pregunta"));
+                pregunta.setInstrumentoId(rs.getInt("Instrumento_id"));
+                pregunta.setPregunta(rs.getString("pregunta"));
+                pregunta.setRespuesta1(rs.getString("respuesta_1"));
+                pregunta.setRespuesta2(rs.getString("respuesta_2"));
+                pregunta.setRespuesta3(rs.getString("respuesta_3"));
+                pregunta.setRespuesta4(rs.getString("respuesta_4"));
+                pregunta.setRespuesta5(rs.getString("respuesta_5"));
+            }
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
         } finally {

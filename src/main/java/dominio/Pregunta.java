@@ -1,6 +1,7 @@
 package dominio;
 
 public class Pregunta {
+
     private int idPregunta;
     private int instrumentoId;
     private String pregunta;
@@ -11,6 +12,10 @@ public class Pregunta {
     private String respuesta5;
 
     public Pregunta() {
+    }
+
+    public Pregunta(int idPregunta) {
+        this.idPregunta = idPregunta;
     }
 
     public Pregunta(int idPregunta, int instrumentoId, String pregunta, String respuesta1, String respuesta2, String respuesta3, String respuesta4, String respuesta5) {
@@ -90,15 +95,15 @@ public class Pregunta {
 
     @Override
     public String toString() {
-        return "Pregunta{" +
-                "idPregunta=" + idPregunta +
-                ", instrumentoId=" + instrumentoId +
-                ", pregunta='" + pregunta + '\'' +
-                ", respuesta1='" + respuesta1 + '\'' +
-                ", respuesta2='" + respuesta2 + '\'' +
-                ", respuesta3='" + respuesta3 + '\'' +
-                ", respuesta4='" + respuesta4 + '\'' +
-                ", respuesta5='" + respuesta5 + '\'' +
-                '}';
+        return "Pregunta{"
+                + "idPregunta=" + idPregunta
+                + ", instrumentoId=" + instrumentoId
+                + ", pregunta='" + pregunta + '\''
+                + ", respuesta1='" + respuesta1 + '\''
+                + ", respuesta2='" + respuesta2 + '\''
+                + ", respuesta3='" + respuesta3 + '\''
+                + ", respuesta4='" + respuesta4 + '\''
+                + ", respuesta5='" + respuesta5 + '\''
+                + '}';
     }
 }

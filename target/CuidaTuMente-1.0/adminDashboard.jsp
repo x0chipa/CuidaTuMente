@@ -147,7 +147,7 @@
                                             <td><%= index++ %></td>
                                             <td><%= resultado.getNivelDeEstres() %></td>
                                             <td><%= resultado.getEstresPuntuacion() %></td>
-                                            <td><button class="btn btn-sm btn-primary">Ver Test</button></td>
+                                            <td><a href="ServletVerTest?sesionId=<%= resultado.getSesionId() %>" class="btn btn-sm btn-primary">Ver Test</a></td>
                                         </tr>
                                         <% } %>
                                         </tbody>
@@ -198,7 +198,7 @@
                                             <td><%= resultado.getAnsiedadPuntuacion() %></td>
                                             <td><%= resultado.getNivelDeDepresion() %></td>
                                             <td><%= resultado.getDepresionPuntuacion() %></td>
-                                            <td><button class="btn btn-sm btn-primary">Ver Test</button></td>
+                                            <td><a href="ServletVerTest?sesionId=<%= resultado.getSesionId() %>" class="btn btn-sm btn-primary">Ver Test</a></td>
                                         </tr>
                                         <% } %>
                                         </tbody>

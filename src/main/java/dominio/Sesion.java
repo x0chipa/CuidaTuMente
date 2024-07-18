@@ -11,6 +11,12 @@ public class Sesion {
     public Sesion() {
     }
 
+    public Sesion(int id) {
+        this.id = id;
+    }
+    
+    
+
     public Sesion(int id, Date fecha, Time hora) {
         this.id = id;
         this.fecha = fecha;

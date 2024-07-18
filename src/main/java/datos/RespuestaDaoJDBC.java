@@ -13,6 +13,7 @@ public class RespuestaDaoJDBC {
     private static final String SQL_INSERT = "INSERT INTO respuestas(sesion_id, pregunta_id, respuesta) VALUES(?, ?, ?)";
     private static final String SQL_UPDATE = "UPDATE respuestas SET sesion_id=?, pregunta_id=?, respuesta=? WHERE id_respuestas=?";
     private static final String SQL_DELETE = "DELETE FROM respuestas WHERE id_respuestas = ?";
+    
 
     public List<Respuesta> listar() {
         Connection conn = null;
