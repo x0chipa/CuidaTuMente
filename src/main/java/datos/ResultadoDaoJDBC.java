@@ -51,7 +51,7 @@ public class ResultadoDaoJDBC {
         }
         return resultados;
     }
-
+    
     public Resultado encontrar(Resultado resultado) {
         Connection conn = null;
         PreparedStatement stmt = null;

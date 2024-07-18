@@ -32,6 +32,8 @@ public class Resultado {
         this.nivelDeDepresion = nivelDeDepresion;
         this.depresionPuntuacion = depresionPuntuacion;
     }
+    
+    
 
     
     public int getId() {
