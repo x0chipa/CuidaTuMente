@@ -23,11 +23,18 @@ public class UsuarioMainTest {
             System.out.println(usuario);
         }
 
+        // Buscar por ID
+        Usuario usuarioEncontrado;
+        usuarioEncontrado = usuarioDao.encontrarPorId(-1);
+        System.out.println("Buscar por ID: " + usuarioEncontrado);
+        
 //        // Buscar por ID
 //        Usuario usuarioEncontrado = new Usuario(1, "", "");
 //        usuarioEncontrado = usuarioDao.encontrar(usuarioEncontrado);
 //        System.out.println("Buscar por ID: " + usuarioEncontrado);
-//
+
+        
+        
 //        // Actualizar
 //        if (usuarioEncontrado != null) {
 //            usuarioEncontrado.setUser("UsuarioActualizado");

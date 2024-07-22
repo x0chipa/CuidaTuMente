@@ -17,32 +17,54 @@
     </properties>
     
     <dependencies>
+        <!-- Provides the Java EE 8 API for the application. The 'provided' scope means the container provides this dependency. -->
+        <dependency>
+            <groupId>com.github.bookong</groupId>
+            <artifactId>cooly-plugin</artifactId>
+            <version>0.2.1</version>
+            <type>maven-plugin</type>
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
+        <!-- MySQL JDBC driver for connecting to the MySQL database. -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.17</version>
         </dependency>
+        <!-- Apache Commons DBCP2 for database connection pooling. -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
             <version>2.7.0</version>
         </dependency>
+        <!-- JavaMail API implementation for sending emails. -->
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version>
         </dependency>
-
+        <!-- JavaMail API for the mail functionalities. -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        <!-- Apache Commons Email library to simplify email sending. -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.5</version>
+        </dependency>
     </dependencies>
     
     <build>
         <plugins>
+            <!-- Maven Compiler Plugin for compiling the source code. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -55,6 +77,7 @@
                     </compilerArguments>
                 </configuration>
             </plugin>
+            <!-- Maven WAR Plugin to package the project as a web application archive (WAR). -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -63,6 +86,7 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+            <!-- Maven Dependency Plugin to copy the specified dependencies to the endorsed directory. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

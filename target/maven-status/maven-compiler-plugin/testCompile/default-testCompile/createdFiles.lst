@@ -1,8 +1,12 @@
+test\MainPruebacorreo.class
+test\MainPruebaCorreo2$1.class
 test\RespuestaMainTest.class
 test\PreguntaMainTest.class
 test\DassMainTest.class
 test\InstrumentoMainTest.class
+test\MainPruebaCorreo2.class
 test\ResultadoMainTest.class
+test\MainPruebacorreo$1.class
 test\TimeConversion.class
 test\SesionMainTest.class
 test\UsuarioMainTest.class

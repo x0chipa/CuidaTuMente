@@ -21,7 +21,7 @@
         </div>
         <div class="oops">
             <h2>OOPS!</h2>
-            <p>We can't find the page that you're looking for :(</p>
+            <p>Los programadores son mensos e hicieron algo mal, sorry UnU</p>
         </div>
         <div class="center-line">
             <div class="hole">

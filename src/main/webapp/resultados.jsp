@@ -40,27 +40,39 @@
                                         Resultado resultado = resultadoDao.encontrarPorSesionId(sesionId).get(0);
                                     %>
                                     <div class="quiz-score">
-                                        <% if (resultado.getNivelDeEstres() != null) { %>
-                                            <div class="mb-3">
-                                                <h6 class="fw-bold text-capitalize">Nivel de Estrés:</h6>
-                                                <p class="mb-1 text-capitalize"><%= resultado.getNivelDeEstres() %></p>
-                                                <p class="text-capitalize">Puntuación Total de Estrés: <%= resultado.getEstresPuntuacion() %></p>
-                                            </div>
+                                        <% if (resultado.getNivelDeEstres() != null) {%>
+                                        <div class="mb-3">
+                                            <h6 class="fw-bold text-capitalize">Nivel de Estrés:</h6>
+                                            <p class="mb-1 text-capitalize"><%= resultado.getNivelDeEstres()%></p>
+                                            <p class="text-capitalize">Puntuación Total de Estrés: <%= resultado.getEstresPuntuacion()%></p>
+                                        </div>
                                         <% } %>
-                                        <% if (resultado.getNivelDeAnsiedad() != null) { %>
-                                            <div class="mb-3">
-                                                <h6 class="fw-bold text-capitalize">Nivel de Ansiedad:</h6>
-                                                <p class="mb-1 text-capitalize"><%= resultado.getNivelDeAnsiedad() %></p>
-                                                <p class="text-capitalize">Puntuación Total de Ansiedad: <%= resultado.getAnsiedadPuntuacion() %></p>
-                                            </div>
+                                        <% if (resultado.getNivelDeAnsiedad() != null) {%>
+                                        <div class="mb-3">
+                                            <h6 class="fw-bold text-capitalize">Nivel de Ansiedad:</h6>
+                                            <p class="mb-1 text-capitalize"><%= resultado.getNivelDeAnsiedad()%></p>
+                                            <p class="text-capitalize">Puntuación Total de Ansiedad: <%= resultado.getAnsiedadPuntuacion()%></p>
+                                        </div>
                                         <% } %>
-                                        <% if (resultado.getNivelDeDepresion() != null) { %>
+                                        <% if (resultado.getNivelDeDepresion() != null) {%>
+                                        <div class="mb-3">
+                                            <h6 class="fw-bold text-capitalize">Nivel de Depresión:</h6>
+                                            <p class="mb-1 text-capitalize"><%= resultado.getNivelDeDepresion()%></p>
+                                            <p class="text-capitalize">Puntuación Total de Depresión: <%= resultado.getDepresionPuntuacion()%></p>
+                                        </div>
+                                        <% }%>
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <h5>¿Deseas que te enviemos tus resultados por correo electrónico?</h5>
+                                        <form action="ServletEnviarResultados" method="post">
+                                            <input type="hidden" name="sesionId" value="<%= sesionId %>">
                                             <div class="mb-3">
-                                                <h6 class="fw-bold text-capitalize">Nivel de Depresión:</h6>
-                                                <p class="mb-1 text-capitalize"><%= resultado.getNivelDeDepresion() %></p>
-                                                <p class="text-capitalize">Puntuación Total de Depresión: <%= resultado.getDepresionPuntuacion() %></p>
+                                                <label for="email" class="form-label">Correo Electrónico:</label>
+                                                <input type="email" class="form-control" id="email" name="email" required>
                                             </div>
-                                        <% } %>
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                            <a href="index.jsp" class="btn btn-secondary">No, gracias</a>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

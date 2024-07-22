@@ -6,7 +6,7 @@ import java.util.*;
 
 public class UsuarioDaoJDBC {
     private static final String SQL_SELECT = "SELECT id_usuario, user, password FROM usuario";
-    private static final String SQL_SELECT_BY_ID = "SELECT id_usuario, user, password FROM usuario WHERE id_usuario = ?";
+    private static final String SQL_SELECT_BY_ID = "SELECT id_usuario, user, password FROM usuario WHERE id_usuario = ?";  
     private static final String SQL_INSERT = "INSERT INTO usuario(user, password) VALUES(?, ?)";
     private static final String SQL_UPDATE = "UPDATE usuario SET user=?, password=? WHERE id_usuario=?";
     private static final String SQL_DELETE = "DELETE FROM usuario WHERE id_usuario = ?";
@@ -54,6 +54,31 @@ public class UsuarioDaoJDBC {
 
             usuario.setUser(user);
             usuario.setPassword(password);
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(rs);
+            Conexion.close(stmt);
+            Conexion.close(conn);
+        }
+        return usuario;
+    }
+    
+     public Usuario encontrarPorId(int idUsuario) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Usuario usuario = null;
+        try {
+            conn = Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_SELECT_BY_ID);
+            stmt.setInt(1, idUsuario);
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                String user = rs.getString("user");
+                String password = rs.getString("password");
+                usuario = new Usuario(idUsuario, user, password);
+            }
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
         } finally {
