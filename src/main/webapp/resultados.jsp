@@ -13,7 +13,7 @@
               integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/styleResultados.css">
-        <link rel="shortcut icon" href="img/icon.jpeg" type="image/x-icon">
+        <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
         <style>
             .text-capitalize {
                 text-transform: capitalize;

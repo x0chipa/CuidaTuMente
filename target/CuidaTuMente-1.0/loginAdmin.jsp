@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/login.css">
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/icon.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <style>
     
