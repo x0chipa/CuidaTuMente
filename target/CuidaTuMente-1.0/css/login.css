@@ -91,9 +91,7 @@ img {
   column-gap: 0.75rem;
   border-bottom: 2px solid var(--white-color);
 }
-.login__icon, .login__eye {
-  font-size: 1.25rem;
-}
+
 .login__input {
   width: 100%;
   padding-block: 0.8rem;
@@ -112,13 +110,7 @@ img {
   font-weight: var(--font-medium);
   transition: top 0.3s, font-size 0.3s;
 }
-.login__eye {
-  position: absolute;
-  right: 0;
-  top: 18px;
-  z-index: 10;
-  cursor: pointer;
-}
+
 .login__box:nth-child(2) input {
   padding-right: 1.8rem;
 }

@@ -10,7 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleError.css">
-    <title>Document</title>
+    <title>Relaja tu Mente - Error 404</title>
+    <link rel="shortcut icon" href="img/icon.jpeg" type="image/x-icon">
 </head>
 <body>
     <div class="room">

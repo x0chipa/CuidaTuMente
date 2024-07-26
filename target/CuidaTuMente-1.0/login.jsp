@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="http://localhost/CuidaTuMente/assets/css/estilosIndex.css">
-    <link rel="shortcut icon" href="http://localhost/CuidaTuMente/assets/img/icono.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.jpeg" type="image/x-icon">
     
     <link rel="stylesheet" href="css/estilosIndex.css">
-    <title>Cuida tu Mente</title>
+    <title>Relaja tu Mente</title>
 </head>
 <body>
     <div class="container" id="cantainer">
         <div class="left">
             <div class="logo">
-                Cuida tu Mente
+                Relaja tu Mente
             </div>
             <h2>Mide y Entiende: Encuentra tu equilibrio con SISCO y DASS-21</h2>
         </div>

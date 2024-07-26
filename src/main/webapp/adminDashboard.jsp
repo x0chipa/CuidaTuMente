@@ -11,13 +11,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin</title>
+    <title>Dashboard Admin - Relaja tu Mente</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="shortcut icon" href="http://localhost/CuidaTuMente/assets/img/icono.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.jpeg" type="image/x-icon">
     <style>
         .container {
             max-width: 1200px;
@@ -56,9 +56,9 @@
         <div class="container">
             <h1 class="text-center mb-4">Dashboard Admin</h1>
             <div class="text-center mb-4">
-                <button id="showAll" class="btn btn-primary">Mostrar Todo</button>
-                <button id="showSisco" class="btn btn-secondary">Mostrar SISCO</button>
-                <button id="showDass" class="btn btn-secondary">Mostrar DASS</button>
+                <button id="showAll" class="btn btn-success">Mostrar Todo</button>
+                <button id="showSisco" class="btn btn-info">Mostrar SISCO</button>
+                <button id="showDass" class="btn btn-info">Mostrar DASS</button>
             </div>
             <div class="text-center mb-4">
                 <label for="numRecords">Mostrar últimos:</label>
@@ -69,7 +69,7 @@
                     <option value="20">20</option>
                     <option value="100">100</option>
                 </select>
-                <button id="applyRecords" class="btn btn-secondary">Aplicar</button>
+                <button id="applyRecords" class="btn btn-dark">Aplicar</button>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -118,7 +118,7 @@
                             %>
 
                             <div id="siscoSection">
-                                <h3>RESULTADOS SISCO</h3>
+                                <h3>SISCO</h3>
                                 <h4>Estadísticas</h4>
                                 <div class="small-chart-container">
                                     <canvas id="siscoChart"></canvas>
@@ -147,7 +147,7 @@
                                             <td><%= index++ %></td>
                                             <td><%= resultado.getNivelDeEstres() %></td>
                                             <td><%= resultado.getEstresPuntuacion() %></td>
-                                            <td><a href="ServletVerTest?sesionId=<%= resultado.getSesionId() %>" class="btn btn-sm btn-primary">Ver Test</a></td>
+                                            <td><a href="ServletVerTest?sesionId=<%= resultado.getSesionId() %>" class="btn btn-sm btn-success">Ver Test</a></td>
                                         </tr>
                                         <% } %>
                                         </tbody>
@@ -156,7 +156,7 @@
                             </div>
 
                             <div id="dassSection">
-                                <h3>RESULTADOS DASS</h3>
+                                <h3>DASS</h3>
                                 <h4>Estadísticas</h4>
                                 <div class="row">
                                     <div class="col-md-4 chart-container">
@@ -198,7 +198,7 @@
                                             <td><%= resultado.getAnsiedadPuntuacion() %></td>
                                             <td><%= resultado.getNivelDeDepresion() %></td>
                                             <td><%= resultado.getDepresionPuntuacion() %></td>
-                                            <td><a href="ServletVerTest?sesionId=<%= resultado.getSesionId() %>" class="btn btn-sm btn-primary">Ver Test</a></td>
+                                            <td><a href="ServletVerTest?sesionId=<%= resultado.getSesionId() %>" class="btn btn-sm btn-success">Ver Test</a></td>
                                         </tr>
                                         <% } %>
                                         </tbody>
@@ -210,7 +210,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="index.jsp" class="btn btn-primary">Volver al inicio</a>
+                <a href="index.jsp" class="btn btn-success">Volver al inicio</a>
             </div>
         </div>
     </div>

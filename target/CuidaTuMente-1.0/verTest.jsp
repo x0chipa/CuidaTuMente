@@ -11,12 +11,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles del Test</title>
+    <title>Detalles del Test - Relaja tu Mente</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="http://localhost/CuidaTuMente/assets/img/icono.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.jpeg" type="image/x-icon">
     <style>
         .container {
             max-width: 900px;
@@ -27,7 +27,7 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         .table thead th {
-            background: #007bff;
+            background: #009688;
             color: #fff;
         }
         .btn-primary {
@@ -38,7 +38,7 @@
             background: #0056b3;
         }
         .date-time-card {
-            background: #007bff;
+            background: #009688;
             color: #fff;
             padding: 15px;
             border-radius: 10px;
@@ -157,7 +157,7 @@
         </div>
     </div>
     <div class="text-center">
-        <a href="ServletAdminDashboard" class="btn btn-primary">Volver al Dashboard</a>
+        <a href="ServletAdminDashboard" class="btn btn-success">Volver al Dashboard</a>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
